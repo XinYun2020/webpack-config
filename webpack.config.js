@@ -23,7 +23,7 @@ module.exports = {
                 ],
             },
             {
-                test: /\.js$/, // any file end with .js
+                test: /\.jsx?$/, // any file end with .js, with the ? this means it may or may not have s
                 exclude: /node_modules/, // b/c data transformation is expensive
                 use: {
                     loader: "babel-loader",
@@ -33,6 +33,10 @@ module.exports = {
     },
 
     plugins: [new MiniCssExtractPlugin()],
+
+    resolve: {
+        extensions: [".js", ".jsx"], // import "./components/App"; support jsx extension 
+    },
 
     // devtool: false,
     devtool: "source-map",
