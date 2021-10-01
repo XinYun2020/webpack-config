@@ -1,7 +1,7 @@
 .hero {
-    background: url("../images/mcsa_it_certificate.jpg");
-    background-size: cover;
+    background: url("../images/monash.jpeg");
+    background-size: contain; // cover, auto
     background-position: center;
-    min-height: 300px;
+    min-height: 55px;
     width: 100%;
 }

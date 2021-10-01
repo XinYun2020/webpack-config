@@ -12,6 +12,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: white;
 }
 
 button {
@@ -19,5 +20,5 @@ button {
 }
 
 ul {
-    list-style-image: url("../images/mcsa_it_certificate.jpg");
+    // list-style-image: url("../images/monash.jpeg");
 }

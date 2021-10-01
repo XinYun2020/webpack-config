@@ -7,6 +7,7 @@ const elvenShieldRecipe = {
     leatherStrips: 2,
     ironIngot: 1,
     refinedMoonstone: 4,
+
 };
 
 const elvenGountletsRecipe = {
@@ -27,12 +28,12 @@ const Recipes = () => {
     const [recipe, setRecipe] = useState({});
     return (
         <div>
-            <h3>Current Recipe: </h3>
+            <h3>Responsibilities: </h3>
             <button onClick={() => setRecipe(elvenShieldRecipe)}>
-                Elven Shield Recipe
+                Website Maintainance
             </button>
             <button onClick={() => setRecipe(elvenGountletsRecipe)}>
-                Elven Gountlets Recipe
+                Project Management
             </button>
 
             <ul>
