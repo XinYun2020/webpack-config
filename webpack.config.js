@@ -1,6 +1,9 @@
 ///webpack.config.js
-
+const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+
 let mode = "development"
 let target = "web"; // web is default originally
 
@@ -14,6 +17,7 @@ module.exports = {
     target: target,
 
     output: {
+        path: path.resolve(__dirname, "dist"), // path.resolve(__dirname, "dist")
         assetModuleFilename: "images/[hash][ext][query]", // organize the asset files in the dist/images
     },
 
@@ -48,7 +52,13 @@ module.exports = {
         ],
     },
 
-    plugins: [new MiniCssExtractPlugin()],
+    plugins: [
+        new CleanWebpackPlugin(), // put at top of this array
+        new MiniCssExtractPlugin(),
+        new HtmlWebpackPlugin({
+            template: "./src/index.html",
+        })
+    ],
 
     resolve: {
         extensions: [".js", ".jsx"], // import "./components/App"; support jsx extension 
