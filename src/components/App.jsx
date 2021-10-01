@@ -1,5 +1,6 @@
 import "../styles/index.scss";
 import Recipes from "./Recipes";
+import certificate from "../images/mcsa_it_certificate.jpg";
 
 
 const App = () => {
@@ -10,9 +11,11 @@ const App = () => {
                 <section>
                     <h1>Oh Hai, React</h1>
                 </section>
+                <img src={certificate} alt="certificate" width= "250"/>
+                <Recipes />
             </main>
 
-            <Recipes />
+            
         </>
     )
 }
